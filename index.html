@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Case 31 — Restaurant thaï &amp; viandes maturées, Trois-Îlets, Martinique</title>
+<meta name="description" content="La Case 31, restaurant niché dans le jardin de l'Habitation Poterie aux Trois-Îlets : cuisine thaïe authentique et viandes maturées d'exception (Black Angus, Wagyu, côtes de bœuf affinées jusqu'à 7 semaines).">
+<meta name="theme-color" content="#F6F1E6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='56' fill='%23F6F1E6'/%3E%3Ccircle cx='60' cy='60' r='50' fill='none' stroke='%238C7355' stroke-width='2'/%3E%3Cpath d='M34 86C46 74 58 60 80 32' fill='none' stroke='%2345532F' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='48' cy='75' rx='8' ry='4' fill='%2345532F' transform='rotate(-35 48 75)'/%3E%3Cellipse cx='62' cy='58' rx='8' ry='4' fill='%2345532F' transform='rotate(-45 62 58)'/%3E%3Cellipse cx='74' cy='42' rx='7' ry='3.5' fill='%2345532F' transform='rotate(-50 74 42)'/%3E%3C/svg%3E">
+
+<!-- Open Graph (mettre à jour og:url / og:image avec le domaine définitif une fois en ligne) -->
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:title" content="La Case 31 — Cuisine thaïe &amp; viandes maturées">
+<meta property="og:description" content="Une case créole dans le jardin de l'Habitation Poterie, Les Trois-Îlets. Cuisine thaïe authentique et viandes maturées jusqu'à 7 semaines.">
+<meta property="og:image" content="assets/images/hero-entrance-1080.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ---------- Reset & base ---------- */
+*,*::before,*::after{box-sizing:border-box;}
+html{color-scheme:light;scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+}
+body{margin:0;}
+img{max-width:100%;display:block;}
+ul{list-style:none;margin:0;padding:0;}
+a{color:inherit;}
+button{font:inherit;}
+
+/* ---------- Brand tokens ---------- */
+:root{
+  --bg:#F6F1E6;
+  --bg-alt:#EEE4D0;
+  --bg-deep:#E4D7BC;
+  --surface:#FCF9F1;
+  --ink:#262B1C;
+  --ink-soft:#4B5240;
+  --taupe:#8C7355;
+  --taupe-dark:#6B5640;
+  --green:#45532F;
+  --green-dark:#313D20;
+  --sage:#AFC09A;
+  --sage-light:#E2E8D4;
+  --wood:#6B4A33;
+  --whatsapp:#2BAF6B;
+  --shadow-soft:0 18px 40px -22px rgba(38,43,28,.35);
+  --shadow-card:0 10px 30px -16px rgba(38,43,28,.28);
+  --radius-lg:22px;
+  --radius-md:14px;
+  --font-display:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-ui:'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --container-w:1180px;
+}
+
+body{
+  font-family:var(--font-ui);
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{
+  width:100%;
+  max-width:var(--container-w);
+  margin-inline:auto;
+  padding-inline:20px;
+}
+@media (min-width:768px){ .container{padding-inline:32px;} }
+
+.skip-link{
+  position:absolute;left:12px;top:-60px;
+  background:var(--green);color:#fff;padding:10px 18px;
+  border-radius:999px;z-index:1000;transition:top .2s ease;
+  font-weight:600;text-decoration:none;
+}
+.skip-link:focus{top:12px;}
+
+section{padding:64px 0;}
+@media (min-width:960px){ section{padding:96px 0;} }
+
+.kicker{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-ui);font-weight:600;font-size:.78rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--green);
+  margin:0 0 14px;
+}
+.kicker::before{content:"";width:26px;height:1.5px;background:var(--green);display:inline-block;}
+
+.section-title{
+  font-family:var(--font-display);
+  font-weight:600;
+  color:var(--taupe-dark);
+  font-size:clamp(2rem,5vw,2.9rem);
+  line-height:1.1;
+  margin:0 0 18px;
+  letter-spacing:.01em;
+}
+.section-lede{
+  max-width:62ch;color:var(--ink-soft);font-size:1.05rem;
+}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 28px;border-radius:999px;font-weight:600;font-size:.95rem;
+  text-decoration:none;border:1.5px solid transparent;cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease;
+  white-space:nowrap;
+}
+.btn:active{transform:translateY(1px);}
+.btn-primary{background:var(--green);color:#fff;box-shadow:var(--shadow-card);}
+.btn-primary:hover{background:var(--green-dark);box-shadow:var(--shadow-soft);}
+.btn-outline{background:transparent;border-color:var(--taupe);color:var(--taupe-dark);}
+.btn-outline:hover{background:var(--taupe);color:#fff;}
+.btn-ghost{background:rgba(252,249,241,.85);color:var(--ink);border-color:rgba(140,115,85,.35);backdrop-filter:blur(6px);}
+.btn-ghost:hover{background:#fff;}
+
+.badge-todo{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--wood);background:rgba(107,74,51,.1);
+  border:1px dashed rgba(107,74,51,.5);
+  padding:3px 9px;border-radius:999px;
+}
+
+/* focus visibility */
+a:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:3px solid var(--green);outline-offset:3px;border-radius:6px;
+}
+.visually-hidden{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+
+/* ---------- Header ---------- */
+.site-header{
+  position:fixed;inset-inline:0;top:0;z-index:200;
+  padding:16px 0;
+  transition:background-color .3s ease, box-shadow .3s ease, padding .3s ease;
+}
+.site-header.is-scrolled{
+  background:rgba(246,241,230,.92);
+  backdrop-filter:blur(10px);
+  box-shadow:0 8px 24px -16px rgba(38,43,28,.4);
+  padding:10px 0;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);}
+.brand-mark{width:44px;height:44px;color:var(--taupe-dark);flex-shrink:0;transition:transform .3s ease;}
+.brand:hover .brand-mark{transform:rotate(8deg);}
+.brand-word{font-family:var(--font-display);font-size:1.4rem;font-weight:600;letter-spacing:.02em;}
+.brand-word em{font-style:normal;color:var(--green);}
+
+.nav-toggle{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(140,115,85,.4);
+  background:rgba(252,249,241,.7);cursor:pointer;
+}
+.nav-toggle-bar,.nav-toggle-bar::before,.nav-toggle-bar::after{
+  content:"";display:block;width:20px;height:2px;background:var(--ink);border-radius:2px;
+  transition:transform .25s ease, opacity .25s ease;
+}
+.nav-toggle-bar::before{transform:translateY(-6px);}
+.nav-toggle-bar::after{transform:translateY(4px);}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar{background:transparent;}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar::before{transform:translateY(0) rotate(45deg);}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar::after{transform:translateY(0) rotate(-45deg);}
+
+.primary-nav{
+  position:fixed;inset:0;top:76px;
+  background:var(--bg);
+  display:flex;flex-direction:column;justify-content:flex-start;align-items:center;gap:28px;
+  padding:40px 24px;
+  transform:translateY(-12px);opacity:0;visibility:hidden;
+  transition:opacity .25s ease, transform .25s ease, visibility .25s ease;
+}
+.primary-nav.is-open{opacity:1;transform:translateY(0);visibility:visible;}
+.primary-nav ul{display:flex;flex-direction:column;align-items:center;gap:22px;}
+.primary-nav a{
+  font-family:var(--font-display);font-size:1.5rem;text-decoration:none;color:var(--ink);
+}
+.primary-nav .nav-cta{margin-top:6px;}
+
+@media (min-width:960px){
+  .nav-toggle{display:none;}
+  .primary-nav{
+    position:static;display:flex;flex-direction:row;align-items:center;gap:32px;
+    padding:0;background:transparent;opacity:1;visibility:visible;transform:none;
+  }
+  .primary-nav ul{flex-direction:row;gap:28px;}
+  .primary-nav a{font-family:var(--font-ui);font-size:.95rem;font-weight:600;}
+  .primary-nav a:hover{color:var(--green);}
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  padding:0;overflow:hidden;
+}
+.hero-media{position:absolute;inset:0;z-index:0;}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 38%;}
+.hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg, rgba(38,33,24,.42) 0%, rgba(38,33,24,.06) 38%, rgba(38,33,24,0) 60%);
+}
+.hero-content{
+  position:relative;z-index:1;width:100%;
+  padding:120px 0 48px;
+}
+.hero-panel{
+  background:rgba(252,249,241,.92);
+  backdrop-filter:blur(8px);
+  border-radius:var(--radius-lg);
+  padding:32px 26px;
+  box-shadow:var(--shadow-soft);
+  max-width:560px;
+}
+.hero-kicker{
+  font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--green);margin:0 0 10px;
+}
+.hero-title{
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(2.5rem,8vw,4.2rem);line-height:1;color:var(--taupe-dark);margin:0 0 14px;
+}
+.hero-sub{color:var(--ink-soft);margin:0 0 24px;font-size:1.02rem;max-width:46ch;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;}
+.hero-scroll{
+  position:absolute;z-index:1;left:50%;bottom:18px;transform:translateX(-50%);
+  display:none;
+}
+@media (min-width:640px){
+  .hero-scroll{display:flex;flex-direction:column;align-items:center;gap:6px;color:#fff;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85;}
+  .hero-scroll .chevron{width:14px;height:14px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg);animation:bob 1.8s ease-in-out infinite;}
+}
+@keyframes bob{0%,100%{transform:rotate(45deg) translate(0,0);}50%{transform:rotate(45deg) translate(4px,4px);}}
+
+@media (min-width:768px){
+  .hero-content{padding:140px 0 80px;}
+  .hero-panel{padding:44px 40px;}
+}
+
+/* ---------- Présentation ---------- */
+.presentation{background:var(--bg);}
+.presentation-grid{
+  display:grid;gap:36px;align-items:center;
+}
+.presentation-photo{
+  border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);
+}
+.presentation-photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;}
+.feature-chips{display:flex;flex-direction:column;gap:14px;margin-top:28px;}
+.feature-chip{
+  display:flex;align-items:flex-start;gap:12px;
+  background:var(--surface);border:1px solid rgba(140,115,85,.18);
+  border-radius:var(--radius-md);padding:14px 16px;
+}
+.feature-chip svg{flex-shrink:0;color:var(--green);margin-top:2px;}
+.feature-chip strong{display:block;font-size:.96rem;color:var(--ink);}
+@media (min-width:860px){
+  .presentation-grid{grid-template-columns:1fr 1fr;gap:64px;}
+  .presentation-grid.is-reversed .presentation-photo{order:2;}
+}
+
+/* ---------- Menu / viandes showcase ---------- */
+.menu-section{background:var(--bg-alt);}
+.menu-head{max-width:680px;margin-bottom:48px;}
+
+.viandes-showcase{
+  display:grid;gap:16px;margin-bottom:64px;
+}
+.viandes-photo{
+  position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-soft);
+}
+.viandes-photo img{width:100%;height:100%;object-fit:cover;}
+.viandes-photo.tall img{aspect-ratio:4/5;}
+.viandes-caption{
+  position:absolute;left:18px;right:18px;bottom:16px;
+  color:#fff;font-size:.85rem;font-weight:600;
+  text-shadow:0 2px 10px rgba(0,0,0,.55);
+}
+.viandes-text{
+  grid-column:1 / -1;
+  background:var(--surface);border-radius:var(--radius-lg);
+  padding:30px 28px;box-shadow:var(--shadow-card);
+}
+.viandes-text p{color:var(--ink-soft);margin:10px 0 0;max-width:60ch;}
+@media (min-width:760px){
+  .viandes-showcase{grid-template-columns:1.1fr 1fr;grid-template-areas:"a b" "text text";}
+  .viandes-showcase .viandes-photo:nth-child(1){grid-area:a;}
+  .viandes-showcase .viandes-photo:nth-child(2){grid-area:b;}
+}
+
+/* tabs */
+.menu-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;}
+.menu-tab{
+  padding:11px 20px;border-radius:999px;border:1.5px solid rgba(140,115,85,.35);
+  background:transparent;color:var(--ink-soft);font-weight:600;font-size:.9rem;cursor:pointer;
+  transition:background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.menu-tab[aria-selected="true"]{background:var(--green);border-color:var(--green);color:#fff;}
+.menu-tab:hover:not([aria-selected="true"]){border-color:var(--green);color:var(--green-dark);}
+
+.menu-panel{display:none;}
+.menu-panel.is-active{display:block;animation:fadeUp .35s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+.menu-group{margin-bottom:34px;}
+.menu-group:last-child{margin-bottom:0;}
+.menu-group-title{
+  font-family:var(--font-display);font-weight:600;color:var(--taupe-dark);
+  font-size:1.4rem;margin:0 0 6px;
+}
+.menu-group-note{color:var(--ink-soft);font-size:.92rem;font-style:italic;margin:0 0 18px;}
+
+.menu-item{
+  display:flex;justify-content:space-between;gap:16px;
+  padding:14px 0;border-bottom:1px dashed rgba(140,115,85,.3);
+}
+.menu-item:last-child{border-bottom:none;}
+.menu-item-name{font-family:var(--font-display);font-size:1.18rem;font-weight:600;color:var(--ink);}
+.menu-item-desc{display:block;font-family:var(--font-ui);font-size:.88rem;color:var(--green);font-weight:500;margin-top:3px;}
+.menu-item-price{
+  font-family:var(--font-display);font-weight:700;color:var(--taupe-dark);font-size:1.15rem;
+  white-space:nowrap;flex-shrink:0;
+}
+
+.menu-footnote{
+  margin-top:24px;padding:16px 18px;border-radius:var(--radius-md);
+  background:var(--sage-light);color:var(--green-dark);font-size:.88rem;
+}
+
+.wine-region{
+  border:1px solid rgba(140,115,85,.25);border-radius:var(--radius-md);
+  margin-bottom:12px;overflow:hidden;background:var(--surface);
+}
+.wine-region summary{
+  cursor:pointer;padding:14px 18px;font-family:var(--font-display);font-weight:600;
+  font-size:1.08rem;color:var(--taupe-dark);list-style:none;display:flex;justify-content:space-between;align-items:center;
+}
+.wine-region summary::-webkit-details-marker{display:none;}
+.wine-region summary::after{content:"+";font-size:1.4rem;color:var(--green);}
+.wine-region[open] summary::after{content:"–";}
+.wine-region .menu-item{padding:10px 18px;}
+.wine-region .menu-item:first-of-type{border-top:1px solid rgba(140,115,85,.18);}
+.wine-note{font-size:.82rem;color:var(--ink-soft);margin-top:14px;}
+
+.menu-disclaimer{margin-top:40px;font-size:.85rem;color:var(--ink-soft);text-align:center;}
+
+/* ---------- Galerie ---------- */
+.gallery-section{background:var(--bg);}
+.gallery-head{max-width:680px;margin-bottom:36px;}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:12px;
+}
+.gallery-item{
+  position:relative;border-radius:var(--radius-md);overflow:hidden;cursor:zoom-in;
+  border:0;padding:0;background:none;display:block;width:100%;
+}
+.gallery-item img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;transition:transform .4s ease;}
+.gallery-item:hover img{transform:scale(1.06);}
+.gallery-item:nth-child(1){grid-column:span 2;}
+.gallery-item:nth-child(1) img{aspect-ratio:16/10;}
+.gallery-caption{
+  position:absolute;left:0;right:0;bottom:0;padding:24px 14px 10px;
+  background:linear-gradient(0deg, rgba(38,33,24,.65), rgba(38,33,24,0));
+  color:#fff;font-size:.82rem;font-weight:600;text-align:left;
+}
+@media (min-width:640px){
+  .gallery-grid{grid-template-columns:repeat(3,1fr);}
+  .gallery-item:nth-child(1){grid-column:span 3;}
+}
+@media (min-width:960px){
+  .gallery-grid{grid-template-columns:repeat(4,1fr);}
+  .gallery-item:nth-child(1){grid-column:span 2;grid-row:span 2;}
+  .gallery-item:nth-child(1) img{aspect-ratio:1/1;height:100%;}
+}
+
+.lightbox{
+  position:fixed;inset:0;z-index:500;
+  background:rgba(38,33,24,.92);
+  display:flex;align-items:center;justify-content:center;padding:24px;
+  opacity:0;visibility:hidden;transition:opacity .25s ease, visibility .25s ease;
+}
+.lightbox.is-open{opacity:1;visibility:visible;}
+.lightbox img{max-width:min(92vw,1000px);max-height:84vh;border-radius:10px;box-shadow:0 30px 60px rgba(0,0,0,.5);}
+.lightbox-caption{color:#f3ead9;margin-top:14px;font-size:.9rem;text-align:center;}
+.lightbox-close{
+  position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;
+  background:rgba(252,249,241,.15);border:1px solid rgba(255,255,255,.3);color:#fff;
+  font-size:1.4rem;line-height:1;cursor:pointer;
+}
+.lightbox-close:hover{background:rgba(252,249,241,.3);}
+
+/* ---------- Infos pratiques ---------- */
+.infos-section{background:var(--bg-deep);}
+.infos-grid{display:grid;gap:32px;}
+.infos-card{
+  background:var(--surface);border-radius:var(--radius-lg);
+  padding:28px 26px;box-shadow:var(--shadow-card);
+}
+.infos-list{display:flex;flex-direction:column;gap:22px;}
+.infos-row{display:flex;gap:14px;align-items:flex-start;}
+.infos-row svg{flex-shrink:0;color:var(--green);margin-top:3px;}
+.infos-row h4{margin:0 0 4px;font-family:var(--font-display);font-size:1.2rem;color:var(--ink);font-weight:600;}
+.infos-row p{margin:0;color:var(--ink-soft);font-size:.95rem;}
+.infos-row .badge-todo{margin-top:6px;}
+.infos-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+.infos-map-note{margin-top:14px;font-size:.82rem;color:var(--ink-soft);}
+@media (min-width:860px){
+  .infos-grid{grid-template-columns:1.1fr .9fr;}
+}
+
+/* ---------- Avis ---------- */
+.avis-section{background:var(--bg);text-align:center;}
+.avis-card{
+  max-width:560px;margin-inline:auto;
+  background:var(--surface);border:1px solid rgba(140,115,85,.2);
+  border-radius:var(--radius-lg);padding:46px 30px;box-shadow:var(--shadow-card);
+}
+.avis-stars{display:flex;justify-content:center;gap:6px;color:var(--taupe);margin-bottom:18px;}
+.avis-card p{color:var(--ink-soft);}
+.avis-card .btn{margin-top:18px;}
+
+/* ---------- Footer ---------- */
+.site-footer{background:var(--green-dark);color:#EDE6D6;padding:56px 0 28px;}
+.footer-grid{display:grid;gap:32px;}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.footer-brand .brand-mark{width:48px;height:48px;color:#EDE6D6;}
+.footer-brand .brand-word{font-size:1.5rem;color:#fff;}
+.footer-tagline{color:#C9CDB9;max-width:34ch;font-size:.92rem;}
+.footer-col h5{font-family:var(--font-ui);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#C9CDB9;margin:0 0 14px;}
+.footer-col ul{display:flex;flex-direction:column;gap:10px;}
+.footer-col a{text-decoration:none;color:#EDE6D6;font-size:.95rem;}
+.footer-col a:hover{color:#fff;text-decoration:underline;}
+.footer-social{display:flex;gap:10px;margin-top:6px;}
+.footer-social a{
+  width:38px;height:38px;border-radius:50%;border:1px solid rgba(237,230,214,.3);
+  display:flex;align-items:center;justify-content:center;
+}
+.footer-social a:hover{background:rgba(237,230,214,.12);}
+.footer-bottom{
+  margin-top:40px;padding-top:22px;border-top:1px solid rgba(237,230,214,.18);
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;
+  font-size:.82rem;color:#B7BCA4;
+}
+@media (min-width:760px){
+  .footer-grid{grid-template-columns:1.4fr .8fr .8fr;}
+}
+
+/* ---------- Floating WhatsApp button ---------- */
+.whatsapp-float{
+  position:fixed;right:18px;bottom:18px;z-index:150;
+  width:60px;height:60px;border-radius:50%;
+  background:var(--whatsapp);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 28px -10px rgba(20,60,40,.55);
+  text-decoration:none;
+}
+.whatsapp-float::before{
+  content:"";position:absolute;inset:0;border-radius:50%;
+  background:var(--whatsapp);opacity:.55;
+  animation:pulse-ring 2.4s ease-out infinite;
+}
+@keyframes pulse-ring{
+  0%{transform:scale(1);opacity:.55;}
+  100%{transform:scale(1.7);opacity:0;}
+}
+.whatsapp-float:hover{filter:brightness(1.06);}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Aller au contenu principal</a>
+
+<!-- Logo mark, reused via <use> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo-mark" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".75"/>
+    <g fill="none" stroke="var(--sage)" stroke-width="2" stroke-linecap="round">
+      <path d="M28 92C42 80 54 68 64 54C70 45 76 36 90 26"/>
+    </g>
+    <g fill="var(--sage)">
+      <ellipse cx="42" cy="83" rx="9" ry="4.4" transform="rotate(-34 42 83)"/>
+      <ellipse cx="54" cy="71" rx="9.5" ry="4.6" transform="rotate(-40 54 71)"/>
+      <ellipse cx="65" cy="56" rx="9" ry="4.4" transform="rotate(-46 65 56)"/>
+      <ellipse cx="77" cy="40" rx="8" ry="4" transform="rotate(-52 77 40)"/>
+      <ellipse cx="87" cy="28" rx="6.5" ry="3.3" transform="rotate(-55 87 28)"/>
+    </g>
+    <text x="60" y="64" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="15" letter-spacing="2" fill="currentColor">LA CASE</text>
+    <text x="60" y="83" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="700" font-size="22" fill="currentColor">31</text>
+  </symbol>
+</svg>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="#hero" class="brand" aria-label="La Case 31, retour à l'accueil">
+      <svg class="brand-mark" viewBox="0 0 120 120" aria-hidden="true"><use href="#logo-mark"/></svg>
+      <span class="brand-word">La Case <em>31</em></span>
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="visually-hidden">Ouvrir le menu</span>
+    </button>
+
+    <nav id="primary-nav" class="primary-nav">
+      <ul>
+        <li><a href="#presentation">L'esprit</a></li>
+        <li><a href="#menu">La carte</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#infos">Infos &amp; accès</a></li>
+        <li><a href="#avis">Avis</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta" href="https://wa.me/596000000000?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20%C3%A0%20La%20Case%2031" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.01 2C6.49 2 2 6.48 2 12c0 1.84.5 3.57 1.36 5.05L2 22l5.1-1.33A9.95 9.95 0 0 0 12.01 22C17.52 22 22 17.52 22 12S17.52 2 12.01 2Zm5.78 14.27c-.25.7-1.24 1.27-2.02 1.43-.55.11-1.27.2-3.68-.79-3.09-1.28-5.07-4.41-5.22-4.62-.15-.21-1.25-1.66-1.25-3.17 0-1.5.78-2.24 1.06-2.54.27-.3.6-.37.8-.37h.58c.18 0 .43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.32.02.53-.1.21-.15.33-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.6.18.3.78 1.29 1.68 2.09 1.16 1.03 2.13 1.36 2.43 1.51.3.15.48.13.66-.08.18-.21.76-.89.96-1.2.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.34.07.13.07.74-.18 1.44Z"/></svg>
+        WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="hero" aria-label="Présentation de La Case 31">
+  <div class="hero-media">
+    <picture>
+      <source type="image/webp" srcset="assets/images/hero-entrance-640.webp 640w, assets/images/hero-entrance-960.webp 960w, assets/images/hero-entrance-1080.webp 1080w" sizes="100vw">
+      <img src="assets/images/hero-entrance-1080.jpg" srcset="assets/images/hero-entrance-640.jpg 640w, assets/images/hero-entrance-960.jpg 960w, assets/images/hero-entrance-1080.jpg 1080w" sizes="100vw" alt="Entrée de La Case 31 le soir, case créole en bois éclairée par des lanternes au milieu d'un jardin tropical" fetchpriority="high">
+    </picture>
+  </div>
+
+  <div class="hero-content container">
+    <div class="hero-panel">
+      <p class="hero-kicker">Cuisine thaïe &amp; viandes maturées</p>
+      <h1 class="hero-title">La Case 31</h1>
+      <p class="hero-sub">Une case créole nichée dans le jardin de l'Habitation Poterie, aux Trois-Îlets — entre saveurs de Thaïlande et viandes d'exception affinées sur place.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://wa.me/596000000000?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20%C3%A0%20La%20Case%2031" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.01 2C6.49 2 2 6.48 2 12c0 1.84.5 3.57 1.36 5.05L2 22l5.1-1.33A9.95 9.95 0 0 0 12.01 22C17.52 22 22 17.52 22 12S17.52 2 12.01 2Zm5.78 14.27c-.25.7-1.24 1.27-2.02 1.43-.55.11-1.27.2-3.68-.79-3.09-1.28-5.07-4.41-5.22-4.62-.15-.21-1.25-1.66-1.25-3.17 0-1.5.78-2.24 1.06-2.54.27-.3.6-.37.8-.37h.58c.18 0 .43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.32.02.53-.1.21-.15.33-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.6.18.3.78 1.29 1.68 2.09 1.16 1.03 2.13 1.36 2.43 1.51.3.15.48.13.66-.08.18-.21.76-.89.96-1.2.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.34.07.13.07.74-.18 1.44Z"/></svg>
+          Réserver sur WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#menu">Découvrir la carte</a>
+      </div>
+    </div>
+  </div>
+
+  <span class="hero-scroll" aria-hidden="true">Découvrir<span class="chevron"></span></span>
+</section>
+
+<section class="presentation" id="presentation" aria-labelledby="presentation-title">
+  <div class="container">
+    <div class="presentation-grid">
+      <div class="presentation-photo">
+        <picture>
+          <source type="image/webp" srcset="assets/images/terrace-452.webp">
+          <img src="assets/images/terrace-452.jpg" alt="Terrasse de La Case 31 en soirée, salon en bois et lanternes au milieu d'un jardin tropical" loading="lazy" width="452" height="678">
+        </picture>
+      </div>
+      <div>
+        <p class="kicker">Notre histoire</p>
+        <h2 class="section-title" id="presentation-title">Deux mondes, une même exigence</h2>
+        <p class="section-lede">À La Case 31, le dépaysement commence dès le jardin tropical de l'Habitation Poterie. Sous les essences de bois et les lanternes du soir, notre cuisine marie deux univers : l'authenticité parfumée de la Thaïlande — currys maison, pad thaï, nems craquants — et l'exigence d'une boucherie de caractère, où Black Angus, Wagyu et côtes de bœuf patientent jusqu'à 7 semaines de maturation.</p>
+
+        <div class="feature-chips">
+          <div class="feature-chip">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12c2-4 5-7 8-7s6 3 8 7c-2 4-5 7-8 7s-6-3-8-7Z"/><circle cx="12" cy="12" r="2.4"/></svg>
+            <span><strong>Cuisine thaïe authentique</strong>currys, pad thaï et nems préparés maison.</span>
+          </div>
+          <div class="feature-chip">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 13c0-5 3-9 7-9s7 4 7 9-3 7-7 7-7-2-7-7Z"/><path d="M9 13h6M9 17h6"/></svg>
+            <span><strong>Viandes maturées jusqu'à 7 semaines</strong>Black Angus, Wagyu, côtes de bœuf d'exception.</span>
+          </div>
+          <div class="feature-chip">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M12 3c-3 2-5 5-5 9s2 7 5 9M12 3c3 2 5 5 5 9s-2 7-5 9"/></svg>
+            <span><strong>Jardin tropical &amp; terrasse</strong>une ambiance chaleureuse, surtout en soirée.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section" id="menu" aria-labelledby="menu-title">
+  <div class="container">
+
+    <div class="viandes-showcase">
+      <div class="viandes-photo tall">
+        <picture>
+          <source type="image/webp" srcset="assets/images/meat-ribs-640.webp 640w, assets/images/meat-ribs-960.webp 960w, assets/images/meat-ribs-1080.webp 1080w" sizes="(min-width:760px) 45vw, 100vw">
+          <img src="assets/images/meat-ribs-1080.jpg" srcset="assets/images/meat-ribs-640.jpg 640w, assets/images/meat-ribs-960.jpg 960w, assets/images/meat-ribs-1080.jpg 1080w" sizes="(min-width:760px) 45vw, 100vw" alt="Côte de bœuf entière persillée, posée sur un billot, prête pour la maturation" loading="lazy">
+        </picture>
+        <span class="viandes-caption">Côte de bœuf, persillage intense</span>
+      </div>
+      <div class="viandes-photo">
+        <picture>
+          <source type="image/webp" srcset="assets/images/meat-board-640.webp 640w, assets/images/meat-board-960.webp 960w, assets/images/meat-board-1080.webp 1080w" sizes="(min-width:760px) 35vw, 100vw">
+          <img src="assets/images/meat-board-1080.jpg" srcset="assets/images/meat-board-640.jpg 640w, assets/images/meat-board-960.jpg 960w, assets/images/meat-board-1080.jpg 1080w" sizes="(min-width:760px) 35vw, 100vw" alt="Pièce de bœuf maturé Black Angus très marbrée, présentée sur planche en bois" loading="lazy">
+        </picture>
+        <span class="viandes-caption">Black Angus &amp; Wagyu maturés</span>
+      </div>
+      <div class="viandes-text">
+        <p class="kicker">Le geste boucher</p>
+        <h2 class="section-title" id="menu-title" style="margin-bottom:0;">Des viandes maturées qui s'imposent</h2>
+        <p>Wagyu Westholme, Black Angus USA, côtes de bœuf Hereford, Salers ou Shorthorn... chaque pièce est sélectionnée puis affinée plusieurs semaines pour révéler un persillage et une saveur hors normes.</p>
+      </div>
+    </div>
+
+    <div class="menu-head">
+      <p class="kicker">La carte</p>
+      <h3 class="section-title" style="font-size:clamp(1.8rem,4vw,2.4rem);">Entrées, plats thaïs, viandes &amp; douceurs</h3>
+      <p class="section-lede">Un avant-goût de notre carte — entrées thaïes et charcuteries maturées, plats signature, pièces de bœuf d'exception, desserts maison et sélection de vins.</p>
+    </div>
+
+    <div role="tablist" class="menu-tabs" aria-label="Catégories de la carte">
+      <button class="menu-tab" id="tab-entrees" role="tab" aria-selected="true" aria-controls="panel-entrees">Entrées</button>
+      <button class="menu-tab" id="tab-thai" role="tab" aria-selected="false" aria-controls="panel-thai" tabindex="-1">Plats thaïlandais</button>
+      <button class="menu-tab" id="tab-viandes" role="tab" aria-selected="false" aria-controls="panel-viandes" tabindex="-1">Viandes maturées</button>
+      <button class="menu-tab" id="tab-desserts" role="tab" aria-selected="false" aria-controls="panel-desserts" tabindex="-1">Desserts &amp; café</button>
+      <button class="menu-tab" id="tab-vins" role="tab" aria-selected="false" aria-controls="panel-vins" tabindex="-1">Vins</button>
+    </div>
+
+    <!-- ENTRÉES -->
+    <div class="menu-panel is-active" id="panel-entrees" role="tabpanel" aria-labelledby="tab-entrees">
+      <div class="menu-group">
+        <h4 class="menu-group-title">Charcuteries de bœuf maturé, séché — à partager</h4>
+        <div class="menu-item"><span><span class="menu-item-name">Cécina de León</span><span class="menu-item-desc">Blonde de Galice maturée et séchée</span></span><span class="menu-item-price">26€</span></div>
+        <div class="menu-item"><span><span class="menu-item-name">Secreto N°7</span><span class="menu-item-desc">Entrecôte de bœuf marinée 7 épices, maturée et séchée 7 semaines</span></span><span class="menu-item-price">36€</span></div>
+        <div class="menu-item"><span><span class="menu-item-name">Wagyu</span><span class="menu-item-desc">Affinée plus de 3 mois, finement persillée, incroyablement subtile</span></span><span class="menu-item-price">38€</span></div>
+      </div>
+      <div class="menu-group">
+        <h4 class="menu-group-title">Bouchées thaïes</h4>
+        <div class="menu-item"><span class="menu-item-name">Nems au filet mignon de porc</span><span class="menu-item-price">14€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Nems de légumes</span><span class="menu-item-price">12€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Rouleaux de printemps poulet et crevettes</span><span class="menu-item-price">12€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Canapés à la crevette et poulet haché</span><span class="menu-item-price">13€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Dim Sum, panier de bouchées vapeur à la crevette</span><span class="menu-item-price">14€</span></div>
+        <div class="menu-item"><span><span class="menu-item-name">Grande Assiette Découverte Thaï</span><span class="menu-item-desc">À partager — nems, brochettes de poulet, rouleau de printemps, dim sum, canapés</span></span><span class="menu-item-price">32€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Soupe de crevettes Tom Yam</span><span class="menu-item-price">13€ / 22€</span></div>
+      </div>
+      <p class="menu-group-note">La liste des allergènes est disponible sur demande.</p>
+    </div>
+
+    <!-- PLATS THAILANDAIS -->
+    <div class="menu-panel" id="panel-thai" role="tabpanel" aria-labelledby="tab-thai" hidden>
+      <div class="menu-group">
+        <div class="menu-item"><span class="menu-item-name">Curry vert de poulet, aubergines, lait de coco, riz parfumé</span><span class="menu-item-price">24€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Curry vert de crevettes, aubergines, lait de coco, riz parfumé</span><span class="menu-item-price">26€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Curry rouge de bœuf, lait de coco, poivrons, kumbava et basilic thaï, riz parfumé</span><span class="menu-item-price">29€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Poulet sauté aux noix de cajou, champignons noirs, riz parfumé</span><span class="menu-item-price">25€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Dorade sautée au basilic thaï, riz parfumé</span><span class="menu-item-price">26€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Pad Thaï, nouilles sautées au poulet</span><span class="menu-item-price">24€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Pad Thaï, nouilles sautées aux crevettes</span><span class="menu-item-price">25€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Khao Phat, riz sauté au poulet</span><span class="menu-item-price">24€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Khao Phat, riz sauté aux crevettes</span><span class="menu-item-price">25€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Plat végétarien</span><span class="menu-item-price">24€</span></div>
+      </div>
+    </div>
+
+    <!-- VIANDES -->
+    <div class="menu-panel" id="panel-viandes" role="tabpanel" aria-labelledby="tab-viandes" hidden>
+      <div class="menu-group">
+        <h4 class="menu-group-title">Nos pièces</h4>
+        <div class="menu-item"><span><span class="menu-item-name">Short Ribs Black Angus USA — 350g</span><span class="menu-item-desc">Viande très goûteuse et confite</span></span><span class="menu-item-price">43€</span></div>
+        <div class="menu-item"><span><span class="menu-item-name">Chuck Flap Black Angus USA — 250g</span><span class="menu-item-desc">Persillée à souhait, un bonheur gustatif</span></span><span class="menu-item-price">46€</span></div>
+        <div class="menu-item"><span><span class="menu-item-name">Cœur d'entrecôte Argentine — 300g</span><span class="menu-item-desc">La quintessence du bœuf argentin</span></span><span class="menu-item-price">49€</span></div>
+        <div class="menu-item"><span><span class="menu-item-name">Wagyu Westholme Australie — 250g</span><span class="menu-item-desc">Marbrée par excellence, fondante, saveur exceptionnelle</span></span><span class="menu-item-price">89€</span></div>
+        <p class="menu-group-note">Toutes nos viandes sont servies avec une sauce et un accompagnement.</p>
+      </div>
+      <div class="menu-group">
+        <h4 class="menu-group-title">Les pièces à partager (max. 4 pers.)</h4>
+        <div class="menu-item"><span><span class="menu-item-name">Picanha Argentine — 1,4kg</span><span class="menu-item-desc">Saveurs inoubliables et tendreté exquise</span></span><span class="menu-item-price">169€</span></div>
+        <div class="menu-item"><span><span class="menu-item-name">Côte de bœuf Hereford Irlande — 1,5kg</span><span class="menu-item-desc">Bêtes légères et jeunes, viande marbrée et tendre</span></span><span class="menu-item-price">196€</span></div>
+        <div class="menu-item"><span><span class="menu-item-name">Côte de bœuf Salers France — 1,5kg</span><span class="menu-item-desc">Viande rouge intense, tendreté et persillage unique</span></span><span class="menu-item-price">206€</span></div>
+        <div class="menu-item"><span><span class="menu-item-name">Côte de bœuf Shorthorn Royaume-Uni — 1,5kg</span><span class="menu-item-desc">Tradition irlandaise, maturée au sel d'Himalaya</span></span><span class="menu-item-price">229€</span></div>
+      </div>
+      <div class="menu-footnote">
+        <strong>Sauces :</strong> Poivre, Roquefort &nbsp;·&nbsp; <strong>Accompagnements :</strong> Frites traditionnelles, Frites sur leur 31, Légumes sautés
+      </div>
+    </div>
+
+    <!-- DESSERTS & CAFE -->
+    <div class="menu-panel" id="panel-desserts" role="tabpanel" aria-labelledby="tab-desserts" hidden>
+      <div class="menu-group">
+        <h4 class="menu-group-title">Desserts</h4>
+        <div class="menu-item"><span class="menu-item-name">Gâteau coulant au chocolat, glace vanille</span><span class="menu-item-price">13€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Cheese cake, coulis de fruits au rhum vieux</span><span class="menu-item-price">12€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Carpaccio d'ananas, sirop basilic thaï et combava, glace coco</span><span class="menu-item-price">12€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Glaces artisanales et locales (1 / 2 / 3 boules)</span><span class="menu-item-price">4€ / 8€ / 12€</span></div>
+        <div class="menu-item"><span><span class="menu-item-name">La Coupe Colonel</span><span class="menu-item-desc">Glace citron et vodka</span></span><span class="menu-item-price">14€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Café Gourmand</span><span class="menu-item-price">14€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Thé Gourmand</span><span class="menu-item-price">16€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Rhum Vieux Gourmand</span><span class="menu-item-price">18€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Champagne Gourmand</span><span class="menu-item-price">20€</span></div>
+      </div>
+      <div class="menu-group">
+        <h4 class="menu-group-title">Cafèterie</h4>
+        <div class="menu-item"><span class="menu-item-name">Espresso Perle Noire</span><span class="menu-item-price">3,50€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Moka Noisette, Mexique Bio</span><span class="menu-item-price">4€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Jamaïque Blue Mountain</span><span class="menu-item-price">6,50€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Café Double, Café Crème</span><span class="menu-item-price">5€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Thés, infusions</span><span class="menu-item-price">6€</span></div>
+      </div>
+    </div>
+
+    <!-- VINS -->
+    <div class="menu-panel" id="panel-vins" role="tabpanel" aria-labelledby="tab-vins" hidden>
+      <details class="wine-region" open>
+        <summary>Rosés de Provence</summary>
+        <div class="menu-item"><span class="menu-item-name">Côteaux d'Aix Provence AOP Domaine La Brillane 2022 (bio)</span><span class="menu-item-price">29€*</span></div>
+        <div class="menu-item"><span class="menu-item-name">Côtes de Provence Camille AOP Domaine Turenne 2023 (bio)</span><span class="menu-item-price">36€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Côtes de Provence AOP Ultimate Provence 2021</span><span class="menu-item-price">44€</span></div>
+      </details>
+      <details class="wine-region">
+        <summary>Blanc — Loire</summary>
+        <div class="menu-item"><span class="menu-item-name">Sauvignon AOC Les Athlètes du Vin 2022</span><span class="menu-item-price">29€*</span></div>
+        <div class="menu-item"><span class="menu-item-name">Vouvray Spring AOC Chenin blanc 2020</span><span class="menu-item-price">39€</span></div>
+      </details>
+      <details class="wine-region">
+        <summary>Blanc — Rhône</summary>
+        <div class="menu-item"><span class="menu-item-name">Côtes du Rhône AOC Guigal 2022</span><span class="menu-item-price">49€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Condrieu AOP Domaine Aurélien Chataignier 2020</span><span class="menu-item-price">97€</span></div>
+      </details>
+      <details class="wine-region">
+        <summary>Blanc — Bourgogne</summary>
+        <div class="menu-item"><span class="menu-item-name">Mâcon-Villages-Vieilles-Vignes AOP Dom. les Chenevières 2022</span><span class="menu-item-price">42€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Petit-Chablis AOP Domaine Albert Bichot 2022</span><span class="menu-item-price">69€</span></div>
+        <div class="menu-item"><span class="menu-item-name">Meursault « Terres Blanches » Dom. Vaudoisey-Creusefond 2020</span><span class="menu-item-price">115€</span></div>
+      </details>
+      <details class="wine-region">
+        <summary>Blanc — Alsace</summary>
+        <div class="menu-item"><span class="menu-item-name">Riesling Bergheim Domaine Sylvie Spielmann 2022</span><span class="menu-item-price">43€</span></div>
+      </details>
+      <details class="wine-region">
+        <summary>Blanc — Languedoc</summary>
+        <div class="menu-item"><span class="menu-item-name">Viognier IGP Domaine de la Baume 2022</span><span class="menu-item-price">31€*</span></div>
+      </details>
+      <details class="wine-region">
+        <summary>Moelleux</summary>
+        <div class="menu-item"><span class="menu-item-name">Côtes de Gascogne IGP 2022 Charmes Colombelle</span><span class="menu-item-price">28€*</span></div>
+      </details>
+      <p class="wine-note">*Disponible au verre de 15cl — 8,5€. Tous les vins sont servis en bouteille de 75cl.</p>
+    </div>
+
+    <p class="menu-disclaimer">Carte et tarifs donnés à titre indicatif, susceptibles d'évoluer selon arrivages et saisons.</p>
+  </div>
+</section>
+
+<section class="gallery-section" id="galerie" aria-labelledby="galerie-title">
+  <div class="container">
+    <div class="gallery-head">
+      <p class="kicker">L'ambiance La Case 31</p>
+      <h2 class="section-title" id="galerie-title">Galerie</h2>
+      <p class="section-lede">Du jardin tropical à l'assiette, un avant-goût en images.</p>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid">
+      <button class="gallery-item" data-full="assets/images/hero-entrance-1080.jpg" data-caption="L'entrée de la case créole, le soir">
+        <picture>
+          <source type="image/webp" srcset="assets/images/hero-entrance-960.webp">
+          <img src="assets/images/hero-entrance-960.jpg" alt="Entrée de La Case 31 le soir au milieu d'un jardin tropical" loading="lazy">
+        </picture>
+        <span class="gallery-caption">L'entrée de la case créole</span>
+      </button>
+
+      <button class="gallery-item" data-full="assets/images/meat-ribs-1080.jpg" data-caption="Côte de bœuf affinée, persillage intense">
+        <picture>
+          <source type="image/webp" srcset="assets/images/meat-ribs-960.webp">
+          <img src="assets/images/meat-ribs-960.jpg" alt="Côte de bœuf entière persillée sur un billot en bois" loading="lazy">
+        </picture>
+        <span class="gallery-caption">Côte de bœuf affinée</span>
+      </button>
+
+      <button class="gallery-item" data-full="assets/images/meat-board-1080.jpg" data-caption="Wagyu &amp; Black Angus en maturation">
+        <picture>
+          <source type="image/webp" srcset="assets/images/meat-board-960.webp">
+          <img src="assets/images/meat-board-960.jpg" alt="Pièce de bœuf Black Angus très marbrée sur planche en bois" loading="lazy">
+        </picture>
+        <span class="gallery-caption">Wagyu &amp; Black Angus</span>
+      </button>
+
+      <button class="gallery-item" data-full="assets/images/padthai-1080.jpg" data-caption="Notre Pad Thaï maison">
+        <picture>
+          <source type="image/webp" srcset="assets/images/padthai-720.webp">
+          <img src="assets/images/padthai-720.jpg" alt="Pad Thaï maison garni de basilic thaï, carotte et quartier de citron vert" loading="lazy" style="object-position:center 72%;">
+        </picture>
+        <span class="gallery-caption">Notre Pad Thaï maison</span>
+      </button>
+
+      <button class="gallery-item" data-full="assets/images/terrace-452.jpg" data-caption="La terrasse en soirée">
+        <picture>
+          <source type="image/webp" srcset="assets/images/terrace-452.webp">
+          <img src="assets/images/terrace-452.jpg" alt="Salon de la terrasse de La Case 31, ambiance chaleureuse en soirée" loading="lazy">
+        </picture>
+        <span class="gallery-caption">La terrasse en soirée</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo agrandie">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Fermer la photo">&times;</button>
+  <figure style="margin:0;text-align:center;">
+    <img id="lightbox-img" src="" alt="">
+    <figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
+  </figure>
+</div>
+
+<section class="infos-section" id="infos" aria-labelledby="infos-title">
+  <div class="container">
+    <div class="infos-grid">
+      <div>
+        <p class="kicker">Infos pratiques</p>
+        <h2 class="section-title" id="infos-title">Nous trouver, nous écrire</h2>
+        <p class="section-lede">Dans le jardin de l'Habitation Poterie, aux Trois-Îlets — comptez quelques minutes en voiture depuis Fort-de-France via la navette maritime.</p>
+
+        <div class="infos-actions">
+          <a class="btn btn-primary" href="https://wa.me/596000000000?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20%C3%A0%20La%20Case%2031" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.01 2C6.49 2 2 6.48 2 12c0 1.84.5 3.57 1.36 5.05L2 22l5.1-1.33A9.95 9.95 0 0 0 12.01 22C17.52 22 22 17.52 22 12S17.52 2 12.01 2Zm5.78 14.27c-.25.7-1.24 1.27-2.02 1.43-.55.11-1.27.2-3.68-.79-3.09-1.28-5.07-4.41-5.22-4.62-.15-.21-1.25-1.66-1.25-3.17 0-1.5.78-2.24 1.06-2.54.27-.3.6-.37.8-.37h.58c.18 0 .43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.32.02.53-.1.21-.15.33-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.6.18.3.78 1.29 1.68 2.09 1.16 1.03 2.13 1.36 2.43 1.51.3.15.48.13.66-.08.18-.21.76-.89.96-1.2.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.34.07.13.07.74-.18 1.44Z"/></svg>
+            Contacter sur WhatsApp
+          </a>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Habitation+Poterie+Les+Trois-%C3%8Ilets+Martinique" target="_blank" rel="noopener">Voir l'itinéraire</a>
+        </div>
+        <p class="infos-map-note">Le numéro WhatsApp affiché est un espace réservé — il sera remplacé par le numéro définitif du restaurant.</p>
+      </div>
+
+      <div class="infos-card">
+        <div class="infos-list">
+          <div class="infos-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11.5A7 7 0 0 1 19 9.5C19 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.6"/></svg>
+            <div>
+              <h4>Adresse</h4>
+              <p>Habitation Poterie<br>97229 Les Trois-Îlets, Martinique</p>
+            </div>
+          </div>
+          <div class="infos-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <div>
+              <h4>Horaires</h4>
+              <p>Mardi – Dimanche : 18h30 – 22h30<br>Fermé le lundi</p>
+              <span class="badge-todo">Horaires à confirmer</span>
+            </div>
+          </div>
+          <div class="infos-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 14l5 2v4a2 2 0 0 1-2 2C9.5 22 2 14.5 2 7a2 2 0 0 1 2-2Z"/></svg>
+            <div>
+              <h4>Téléphone</h4>
+              <p>+596 5__ __ __ __</p>
+              <span class="badge-todo">Numéro à finaliser</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="avis-section" id="avis" aria-labelledby="avis-title">
+  <div class="container">
+    <p class="kicker" style="justify-content:center;">Avis clients</p>
+    <h2 class="section-title" id="avis-title">Vos avis arrivent bientôt</h2>
+    <div class="avis-card">
+      <div class="avis-stars" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.8 1.4 7L12 17.8 5.6 21.1 7 14.1 2 9.3l7.1-.7L12 2Z"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.8 1.4 7L12 17.8 5.6 21.1 7 14.1 2 9.3l7.1-.7L12 2Z"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.8 1.4 7L12 17.8 5.6 21.1 7 14.1 2 9.3l7.1-.7L12 2Z"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.8 1.4 7L12 17.8 5.6 21.1 7 14.1 2 9.3l7.1-.7L12 2Z"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.8 1.4 7L12 17.8 5.6 21.1 7 14.1 2 9.3l7.1-.7L12 2Z"/></svg>
+      </div>
+      <p>Notre nouvelle vitrine en ligne vient tout juste d'ouvrir. Vos avis Google et TripAdvisor seront bientôt mis en avant ici.</p>
+      <a class="btn btn-outline" href="#" rel="noopener">Laisser un avis sur Google</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<a class="whatsapp-float" href="https://wa.me/596000000000?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20%C3%A0%20La%20Case%2031" target="_blank" rel="noopener" aria-label="Contacter La Case 31 sur WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="position:relative;"><path d="M12.01 2C6.49 2 2 6.48 2 12c0 1.84.5 3.57 1.36 5.05L2 22l5.1-1.33A9.95 9.95 0 0 0 12.01 22C17.52 22 22 17.52 22 12S17.52 2 12.01 2Zm5.78 14.27c-.25.7-1.24 1.27-2.02 1.43-.55.11-1.27.2-3.68-.79-3.09-1.28-5.07-4.41-5.22-4.62-.15-.21-1.25-1.66-1.25-3.17 0-1.5.78-2.24 1.06-2.54.27-.3.6-.37.8-.37h.58c.18 0 .43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.32.02.53-.1.21-.15.33-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.6.18.3.78 1.29 1.68 2.09 1.16 1.03 2.13 1.36 2.43 1.51.3.15.48.13.66-.08.18-.21.76-.89.96-1.2.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.34.07.13.07.74-.18 1.44Z"/></svg>
+</a>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg class="brand-mark" viewBox="0 0 120 120" aria-hidden="true"><use href="#logo-mark"/></svg>
+          <span class="brand-word">La Case 31</span>
+        </div>
+        <p class="footer-tagline">Cuisine thaïe authentique &amp; viandes maturées d'exception, dans le jardin de l'Habitation Poterie, Les Trois-Îlets.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="La Case 31 sur Instagram (lien à venir)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="La Case 31 sur Facebook (lien à venir)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8h2V4h-2a4 4 0 0 0-4 4v2H9v4h2v6h4v-6h2.5l.5-4H15V8.5c0-.3.2-.5.5-.5Z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Le restaurant</h5>
+        <ul>
+          <li><a href="#presentation">L'esprit</a></li>
+          <li><a href="#menu">La carte</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#avis">Avis</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li>Habitation Poterie<br>97229 Les Trois-Îlets</li>
+          <li>+596 5__ __ __ __ <em style="font-style:normal;opacity:.7;">(à confirmer)</em></li>
+          <li><a href="https://wa.me/596000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 La Case 31. Tous droits réservés.</span>
+      <span>Habitation Poterie, Les Trois-Îlets, Martinique</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  // Sticky header background on scroll
+  var header = document.getElementById("site-header");
+  var onScroll = function(){
+    header.classList.toggle("is-scrolled", window.scrollY > 24);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // Mobile nav toggle
+  var navToggle = document.getElementById("nav-toggle");
+  var nav = document.getElementById("primary-nav");
+  function closeNav(){
+    navToggle.setAttribute("aria-expanded", "false");
+    nav.classList.remove("is-open");
+  }
+  navToggle.addEventListener("click", function(){
+    var open = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", String(!open));
+    nav.classList.toggle("is-open", !open);
+  });
+  nav.querySelectorAll("a").forEach(function(link){
+    link.addEventListener("click", closeNav);
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape") closeNav();
+  });
+
+  // Menu tabs
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".menu-tab"));
+  function selectTab(tab){
+    tabs.forEach(function(t){
+      var selected = t === tab;
+      t.setAttribute("aria-selected", String(selected));
+      t.tabIndex = selected ? 0 : -1;
+      var panel = document.getElementById(t.getAttribute("aria-controls"));
+      panel.hidden = !selected;
+      panel.classList.toggle("is-active", selected);
+    });
+    tab.focus();
+  }
+  tabs.forEach(function(tab, i){
+    tab.addEventListener("click", function(){ selectTab(tab); });
+    tab.addEventListener("keydown", function(e){
+      var newIndex = null;
+      if (e.key === "ArrowRight") newIndex = (i + 1) % tabs.length;
+      if (e.key === "ArrowLeft") newIndex = (i - 1 + tabs.length) % tabs.length;
+      if (newIndex !== null){ e.preventDefault(); selectTab(tabs[newIndex]); }
+    });
+  });
+
+  // Lightbox
+  var lightbox = document.getElementById("lightbox");
+  var lightboxImg = document.getElementById("lightbox-img");
+  var lightboxCaption = document.getElementById("lightbox-caption");
+  var lastFocused = null;
+
+  function openLightbox(src, caption){
+    lastFocused = document.activeElement;
+    lightboxImg.src = src;
+    lightboxImg.alt = caption || "";
+    lightboxCaption.textContent = caption || "";
+    lightbox.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+    document.getElementById("lightbox-close").focus();
+  }
+  function closeLightbox(){
+    lightbox.classList.remove("is-open");
+    document.body.style.overflow = "";
+    lightboxImg.src = "";
+    if (lastFocused) lastFocused.focus();
+  }
+  document.querySelectorAll(".gallery-item").forEach(function(item){
+    item.addEventListener("click", function(){
+      openLightbox(item.getAttribute("data-full"), item.getAttribute("data-caption"));
+    });
+  });
+  document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", function(e){
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
+  });
+})();
+</script>
+</body>
+</html>
