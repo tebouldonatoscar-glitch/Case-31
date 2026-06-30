@@ -84,6 +84,9 @@ body{
 section{padding:64px 0;}
 @media (min-width:960px){ section{padding:96px 0;} }
 
+.seam{height:56px;}
+@media (min-width:960px){ .seam{height:88px;} }
+
 .kicker{
   display:inline-flex;align-items:center;gap:10px;
   font-family:var(--font-ui);font-weight:600;font-size:.78rem;
@@ -140,21 +143,33 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 /* ---------- Header ---------- */
 .site-header{
   position:fixed;inset-inline:0;top:0;z-index:200;
-  padding:16px 0;
-  transition:background-color .3s ease, box-shadow .3s ease, padding .3s ease;
+  padding:22px 0 40px;
+  background:linear-gradient(180deg, rgba(24,22,15,.62) 0%, rgba(24,22,15,.28) 55%, rgba(24,22,15,0) 100%);
+  transition:background-color .35s ease, background .35s ease, box-shadow .35s ease, padding .35s ease;
 }
+.site-header .brand-mark{color:#fff;filter:drop-shadow(0 2px 6px rgba(0,0,0,.45));transition:color .3s ease, filter .3s ease;}
+.site-header .brand-word{color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.4);transition:color .3s ease, text-shadow .3s ease;}
+.site-header .brand-word em{color:var(--sage);}
+.site-header .primary-nav > ul > li > a{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.4);transition:color .3s ease, text-shadow .3s ease;}
 .site-header.is-scrolled{
-  background:rgba(246,241,230,.92);
+  background:rgba(246,241,230,.94);
   backdrop-filter:blur(10px);
   box-shadow:0 8px 24px -16px rgba(38,43,28,.4);
   padding:10px 0;
 }
+.site-header.is-scrolled .brand-mark{color:var(--taupe-dark);filter:none;}
+.site-header.is-scrolled .brand-word{color:var(--ink);text-shadow:none;}
+.site-header.is-scrolled .brand-word em{color:var(--green);}
+.site-header.is-scrolled .primary-nav > ul > li > a{color:var(--ink);text-shadow:none;}
+@media (max-width:959px){
+  .site-header .primary-nav.is-open > ul > li > a{color:var(--ink);text-shadow:none;}
+}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);}
-.brand-mark{width:44px;height:44px;color:var(--taupe-dark);flex-shrink:0;transition:transform .3s ease;}
+.brand-mark{width:44px;height:44px;flex-shrink:0;transition:transform .3s ease;}
 .brand:hover .brand-mark{transform:rotate(8deg);}
 .brand-word{font-family:var(--font-display);font-size:1.4rem;font-weight:600;letter-spacing:.02em;}
-.brand-word em{font-style:normal;color:var(--green);}
+.brand-word em{font-style:normal;}
 
 .nav-toggle{
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
@@ -202,11 +217,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
   position:relative;min-height:100svh;display:flex;align-items:flex-end;
   padding:0;overflow:hidden;
 }
-.hero-media{position:absolute;inset:0;z-index:0;}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 38%;}
+.hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 38%;animation:heroZoom 22s ease-out forwards;}
+@keyframes heroZoom{from{transform:scale(1);}to{transform:scale(1.09);}}
 .hero-media::after{
   content:"";position:absolute;inset:0;
   background:linear-gradient(0deg, rgba(38,33,24,.42) 0%, rgba(38,33,24,.06) 38%, rgba(38,33,24,0) 60%);
+}
+.hero::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:140px;z-index:0;pointer-events:none;
+  background:linear-gradient(180deg, rgba(246,241,230,0) 0%, var(--bg) 96%);
 }
 .hero-content{
   position:relative;z-index:1;width:100%;
@@ -243,6 +263,37 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 @media (min-width:768px){
   .hero-content{padding:140px 0 80px;}
   .hero-panel{padding:44px 40px;}
+}
+
+/* ---------- Spotlight duo ---------- */
+.spotlight{background:var(--bg);position:relative;padding:0;}
+.spotlight-grid{display:grid;grid-template-columns:1fr;}
+.spotlight-item{
+  position:relative;display:block;min-height:52vh;overflow:hidden;
+  text-decoration:none;color:#fff;
+}
+.spotlight-item img{
+  width:100%;height:100%;object-fit:cover;position:absolute;inset:0;
+  transition:transform .8s cubic-bezier(.2,.7,.2,1);
+}
+.spotlight-item:hover img{transform:scale(1.07);}
+.spotlight-item::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg, rgba(20,18,12,.78) 0%, rgba(20,18,12,.18) 55%, rgba(20,18,12,.12) 100%);
+}
+.spotlight-text{
+  position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:34px 26px;
+}
+.spotlight-kicker{font-weight:700;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);margin:0 0 8px;}
+.spotlight-title{font-family:var(--font-display);font-weight:600;font-size:clamp(1.6rem,4vw,2.3rem);margin:0 0 6px;line-height:1.1;}
+.spotlight-link{font-size:.85rem;font-weight:600;display:inline-flex;align-items:center;gap:6px;opacity:.92;}
+.spotlight-link svg{transition:transform .25s ease;}
+.spotlight-item:hover .spotlight-link svg{transform:translateX(4px);}
+@media (min-width:760px){
+  .spotlight-grid{grid-template-columns:1fr 1fr;}
+  .spotlight-item{min-height:64vh;}
+  .spotlight-text{padding:48px;}
 }
 
 /* ---------- Présentation ---------- */
@@ -538,7 +589,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
     <div class="hero-panel">
       <p class="hero-kicker">Cuisine thaïe &amp; viandes maturées</p>
       <h1 class="hero-title">La Case 31</h1>
-      <p class="hero-sub">Une case créole nichée dans le jardin de l'Habitation Poterie, aux Trois-Îlets — entre saveurs de Thaïlande et viandes d'exception affinées sur place.</p>
+      <p class="hero-sub">Une case créole dans le jardin de l'Habitation Poterie — saveurs de Thaïlande, viandes d'exception.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="https://wa.me/596000000000?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20%C3%A0%20La%20Case%2031" target="_blank" rel="noopener">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.01 2C6.49 2 2 6.48 2 12c0 1.84.5 3.57 1.36 5.05L2 22l5.1-1.33A9.95 9.95 0 0 0 12.01 22C17.52 22 22 17.52 22 12S17.52 2 12.01 2Zm5.78 14.27c-.25.7-1.24 1.27-2.02 1.43-.55.11-1.27.2-3.68-.79-3.09-1.28-5.07-4.41-5.22-4.62-.15-.21-1.25-1.66-1.25-3.17 0-1.5.78-2.24 1.06-2.54.27-.3.6-.37.8-.37h.58c.18 0 .43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.32.02.53-.1.21-.15.33-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.6.18.3.78 1.29 1.68 2.09 1.16 1.03 2.13 1.36 2.43 1.51.3.15.48.13.66-.08.18-.21.76-.89.96-1.2.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.34.07.13.07.74-.18 1.44Z"/></svg>
@@ -550,6 +601,33 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
   </div>
 
   <span class="hero-scroll" aria-hidden="true">Découvrir<span class="chevron"></span></span>
+</section>
+
+<section class="spotlight" aria-label="Nos plats signature">
+  <div class="spotlight-grid">
+    <a class="spotlight-item" href="#menu">
+      <picture>
+        <source type="image/webp" srcset="assets/images/padthai-720.webp 720w, assets/images/padthai-1080.webp 1080w" sizes="(min-width:760px) 50vw, 100vw">
+        <img src="assets/images/padthai-1080.jpg" srcset="assets/images/padthai-720.jpg 720w, assets/images/padthai-1080.jpg 1080w" sizes="(min-width:760px) 50vw, 100vw" alt="Pad Thaï maison, nouilles sautées et basilic thaï" loading="lazy" style="object-position:center 72%;">
+      </picture>
+      <div class="spotlight-text">
+        <p class="spotlight-kicker">Cuisine thaïe</p>
+        <h2 class="spotlight-title">Des saveurs authentiques, faites maison</h2>
+        <span class="spotlight-link">Découvrir la carte <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+    <a class="spotlight-item" href="#menu">
+      <picture>
+        <source type="image/webp" srcset="assets/images/meat-ribs-960.webp 960w, assets/images/meat-ribs-1080.webp 1080w" sizes="(min-width:760px) 50vw, 100vw">
+        <img src="assets/images/meat-ribs-1080.jpg" srcset="assets/images/meat-ribs-960.jpg 960w, assets/images/meat-ribs-1080.jpg 1080w" sizes="(min-width:760px) 50vw, 100vw" alt="Côte de bœuf maturée, persillage intense" loading="lazy">
+      </picture>
+      <div class="spotlight-text">
+        <p class="spotlight-kicker">Viandes maturées</p>
+        <h2 class="spotlight-title">Jusqu'à 7 semaines d'affinage</h2>
+        <span class="spotlight-link">Voir nos pièces <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+  </div>
 </section>
 
 <section class="presentation" id="presentation" aria-labelledby="presentation-title">
@@ -564,7 +642,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
       <div>
         <p class="kicker">Notre histoire</p>
         <h2 class="section-title" id="presentation-title">Deux mondes, une même exigence</h2>
-        <p class="section-lede">À La Case 31, le dépaysement commence dès le jardin tropical de l'Habitation Poterie. Sous les essences de bois et les lanternes du soir, notre cuisine marie deux univers : l'authenticité parfumée de la Thaïlande — currys maison, pad thaï, nems craquants — et l'exigence d'une boucherie de caractère, où Black Angus, Wagyu et côtes de bœuf patientent jusqu'à 7 semaines de maturation.</p>
+        <p class="section-lede">Dans le jardin tropical de l'Habitation Poterie, notre cuisine marie deux univers : l'authenticité parfumée de la Thaïlande et l'exigence d'une boucherie de caractère, maturée jusqu'à 7 semaines.</p>
 
         <div class="feature-chips">
           <div class="feature-chip">
@@ -584,6 +662,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
     </div>
   </div>
 </section>
+
+<div class="seam" style="background:linear-gradient(180deg,var(--bg),var(--bg-alt));" aria-hidden="true"></div>
 
 <section class="menu-section" id="menu" aria-labelledby="menu-title">
   <div class="container">
@@ -606,14 +686,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
       <div class="viandes-text">
         <p class="kicker">Le geste boucher</p>
         <h2 class="section-title" id="menu-title" style="margin-bottom:0;">Des viandes maturées qui s'imposent</h2>
-        <p>Wagyu Westholme, Black Angus USA, côtes de bœuf Hereford, Salers ou Shorthorn... chaque pièce est sélectionnée puis affinée plusieurs semaines pour révéler un persillage et une saveur hors normes.</p>
+        <p>Wagyu, Black Angus, côtes de bœuf Hereford, Salers ou Shorthorn — chaque pièce est affinée plusieurs semaines pour un persillage et une saveur hors normes.</p>
       </div>
     </div>
 
     <div class="menu-head">
       <p class="kicker">La carte</p>
       <h3 class="section-title" style="font-size:clamp(1.8rem,4vw,2.4rem);">Entrées, plats thaïs, viandes &amp; douceurs</h3>
-      <p class="section-lede">Un avant-goût de notre carte — entrées thaïes et charcuteries maturées, plats signature, pièces de bœuf d'exception, desserts maison et sélection de vins.</p>
+      <p class="section-lede">Entrées thaïes, plats signature, pièces de bœuf d'exception, desserts maison et sélection de vins.</p>
     </div>
 
     <div role="tablist" class="menu-tabs" aria-label="Catégories de la carte">
@@ -750,6 +830,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
   </div>
 </section>
 
+<div class="seam" style="background:linear-gradient(180deg,var(--bg-alt),var(--bg));" aria-hidden="true"></div>
+
 <section class="gallery-section" id="galerie" aria-labelledby="galerie-title">
   <div class="container">
     <div class="gallery-head">
@@ -810,13 +892,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
   </figure>
 </div>
 
+<div class="seam" style="background:linear-gradient(180deg,var(--bg),var(--bg-deep));" aria-hidden="true"></div>
+
 <section class="infos-section" id="infos" aria-labelledby="infos-title">
   <div class="container">
     <div class="infos-grid">
       <div>
         <p class="kicker">Infos pratiques</p>
         <h2 class="section-title" id="infos-title">Nous trouver, nous écrire</h2>
-        <p class="section-lede">Dans le jardin de l'Habitation Poterie, aux Trois-Îlets — comptez quelques minutes en voiture depuis Fort-de-France via la navette maritime.</p>
+        <p class="section-lede">Dans le jardin de l'Habitation Poterie, aux Trois-Îlets — à quelques minutes de Fort-de-France.</p>
 
         <div class="infos-actions">
           <a class="btn btn-primary" href="https://wa.me/596000000000?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20%C3%A0%20La%20Case%2031" target="_blank" rel="noopener">
@@ -859,6 +943,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
   </div>
 </section>
 
+<div class="seam" style="background:linear-gradient(180deg,var(--bg-deep),var(--bg));" aria-hidden="true"></div>
+
 <section class="avis-section" id="avis" aria-labelledby="avis-title">
   <div class="container">
     <p class="kicker" style="justify-content:center;">Avis clients</p>
@@ -878,6 +964,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 </section>
 
 </main>
+
+<div class="seam" style="background:linear-gradient(180deg,var(--bg),var(--green-dark));" aria-hidden="true"></div>
 
 <a class="whatsapp-float" href="https://wa.me/596000000000?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20%C3%A0%20La%20Case%2031" target="_blank" rel="noopener" aria-label="Contacter La Case 31 sur WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="position:relative;"><path d="M12.01 2C6.49 2 2 6.48 2 12c0 1.84.5 3.57 1.36 5.05L2 22l5.1-1.33A9.95 9.95 0 0 0 12.01 22C17.52 22 22 17.52 22 12S17.52 2 12.01 2Zm5.78 14.27c-.25.7-1.24 1.27-2.02 1.43-.55.11-1.27.2-3.68-.79-3.09-1.28-5.07-4.41-5.22-4.62-.15-.21-1.25-1.66-1.25-3.17 0-1.5.78-2.24 1.06-2.54.27-.3.6-.37.8-.37h.58c.18 0 .43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.32.02.53-.1.21-.15.33-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.6.18.3.78 1.29 1.68 2.09 1.16 1.03 2.13 1.36 2.43 1.51.3.15.48.13.66-.08.18-.21.76-.89.96-1.2.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.34.07.13.07.74-.18 1.44Z"/></svg>
