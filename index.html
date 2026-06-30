@@ -142,6 +142,29 @@ section{padding:64px 0;}
 a:focus-visible,button:focus-visible,summary:focus-visible{
   outline:3px solid var(--green);outline-offset:3px;border-radius:6px;
 }
+
+/* ---------- Scroll reveal ---------- */
+html.js-anim .reveal{
+  opacity:0;transform:translateY(32px);
+  transition:opacity .8s cubic-bezier(.16,.8,.24,1), transform .8s cubic-bezier(.16,.8,.24,1);
+}
+html.js-anim .reveal.is-visible{opacity:1;transform:translateY(0);}
+html.js-anim .reveal-scale{
+  opacity:0;transform:scale(.92);
+  transition:opacity .8s ease, transform .8s ease;
+}
+html.js-anim .reveal-scale.is-visible{opacity:1;transform:scale(1);}
+html.js-anim .reveal-group > *{
+  opacity:0;transform:translateY(28px);
+  transition:opacity .6s ease, transform .6s ease;
+}
+html.js-anim .reveal-group.is-visible > *{opacity:1;transform:translateY(0);}
+html.js-anim .reveal-group.is-visible > *:nth-child(1){transition-delay:.05s;}
+html.js-anim .reveal-group.is-visible > *:nth-child(2){transition-delay:.13s;}
+html.js-anim .reveal-group.is-visible > *:nth-child(3){transition-delay:.21s;}
+html.js-anim .reveal-group.is-visible > *:nth-child(4){transition-delay:.29s;}
+html.js-anim .reveal-group.is-visible > *:nth-child(5){transition-delay:.37s;}
+html.js-anim .reveal-group.is-visible > *:nth-child(6){transition-delay:.45s;}
 .visually-hidden{
   position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
   clip:rect(0,0,0,0);white-space:nowrap;border:0;
@@ -253,13 +276,22 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 .hero-kicker{
   font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;
   color:var(--green);margin:0 0 10px;
+  animation:fadeUpIn .8s .1s cubic-bezier(.16,.8,.24,1) both;
 }
 .hero-title{
   font-family:var(--font-display);font-weight:700;
   font-size:clamp(2.5rem,8vw,4.2rem);line-height:1;color:var(--taupe-dark);margin:0 0 14px;
+  animation:fadeUpIn .9s .22s cubic-bezier(.16,.8,.24,1) both;
 }
-.hero-sub{color:var(--ink-soft);margin:0 0 24px;font-size:1.02rem;max-width:46ch;}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;}
+.hero-sub{
+  color:var(--ink-soft);margin:0 0 24px;font-size:1.02rem;max-width:46ch;
+  animation:fadeUpIn .9s .34s cubic-bezier(.16,.8,.24,1) both;
+}
+.hero-ctas{
+  display:flex;flex-wrap:wrap;gap:12px;
+  animation:fadeUpIn .9s .46s cubic-bezier(.16,.8,.24,1) both;
+}
+@keyframes fadeUpIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
 .hero-scroll{
   position:absolute;z-index:1;left:50%;bottom:18px;transform:translateX(-50%);
   display:none;
@@ -616,7 +648,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 </section>
 
 <section class="spotlight" aria-label="Nos plats signature">
-  <div class="spotlight-grid">
+  <div class="spotlight-grid reveal-group">
     <a class="spotlight-item" href="#menu">
       <picture>
         <source type="image/webp" srcset="assets/images/padthai-720.webp 720w, assets/images/padthai-1080.webp 1080w" sizes="(min-width:760px) 50vw, 100vw">
@@ -645,19 +677,19 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 <section class="presentation" id="presentation" aria-labelledby="presentation-title">
   <div class="container">
     <div class="presentation-grid">
-      <div class="presentation-photo">
+      <div class="presentation-photo reveal-scale">
         <picture>
           <source type="image/webp" srcset="assets/images/terrace-452.webp">
           <img src="assets/images/terrace-452.jpg" alt="Terrasse de La Case 31 en soirée, salon en bois et lanternes au milieu d'un jardin tropical" loading="lazy" width="452" height="678">
         </picture>
       </div>
-      <div style="position:relative;">
+      <div class="reveal" style="position:relative;">
         <svg class="leaf-watermark" viewBox="0 0 100 56" aria-hidden="true"><use href="#leaf-sprig"/></svg>
         <p class="kicker">Notre histoire <svg class="leaf-accent" viewBox="0 0 100 56" aria-hidden="true"><use href="#leaf-sprig"/></svg></p>
         <h2 class="section-title" id="presentation-title">Deux mondes, une même exigence</h2>
         <p class="section-lede">Dans le jardin tropical de l'Habitation Poterie, notre cuisine marie deux univers : l'authenticité parfumée de la Thaïlande et l'exigence d'une boucherie de caractère, maturée jusqu'à 7 semaines.</p>
 
-        <div class="feature-chips">
+        <div class="feature-chips reveal-group">
           <div class="feature-chip">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12c2-4 5-7 8-7s6 3 8 7c-2 4-5 7-8 7s-6-3-8-7Z"/><circle cx="12" cy="12" r="2.4"/></svg>
             <span><strong>Cuisine thaïe authentique</strong>currys, pad thaï et nems préparés maison.</span>
@@ -681,7 +713,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 <section class="menu-section" id="menu" aria-labelledby="menu-title">
   <div class="container">
 
-    <div class="viandes-showcase">
+    <div class="viandes-showcase reveal-group">
       <div class="viandes-photo tall">
         <picture>
           <source type="image/webp" srcset="assets/images/meat-ribs-640.webp 640w, assets/images/meat-ribs-960.webp 960w, assets/images/meat-ribs-1080.webp 1080w" sizes="(min-width:760px) 45vw, 100vw">
@@ -703,7 +735,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
       </div>
     </div>
 
-    <div class="menu-head">
+    <div class="menu-head reveal">
       <p class="kicker">La carte <svg class="leaf-accent" viewBox="0 0 100 56" aria-hidden="true"><use href="#leaf-sprig"/></svg></p>
       <h3 class="section-title" style="font-size:clamp(1.8rem,4vw,2.4rem);">Entrées, plats thaïs, viandes &amp; douceurs</h3>
       <p class="section-lede">Entrées thaïes, plats signature, pièces de bœuf d'exception, desserts maison et sélection de vins.</p>
@@ -885,7 +917,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
       <p class="section-lede">Du jardin tropical à l'assiette, un avant-goût en images.</p>
     </div>
 
-    <div class="gallery-grid" id="gallery-grid">
+    <div class="gallery-grid reveal-group" id="gallery-grid">
       <button class="gallery-item" data-full="assets/images/hero-entrance-1080.jpg" data-caption="L'entrée de la case créole, le soir">
         <picture>
           <source type="image/webp" srcset="assets/images/hero-entrance-960.webp">
@@ -942,7 +974,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 <section class="infos-section" id="infos" aria-labelledby="infos-title">
   <div class="container">
     <div class="infos-grid">
-      <div>
+      <div class="reveal">
         <p class="kicker">Infos pratiques <svg class="leaf-accent" viewBox="0 0 100 56" aria-hidden="true"><use href="#leaf-sprig"/></svg></p>
         <h2 class="section-title" id="infos-title">Nous trouver, nous écrire</h2>
         <p class="section-lede">Dans le jardin de l'Habitation Poterie, aux Trois-Îlets — à quelques minutes de Fort-de-France.</p>
@@ -957,7 +989,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
         <p class="infos-map-note">Le numéro WhatsApp affiché est un espace réservé — il sera remplacé par le numéro définitif du restaurant.</p>
       </div>
 
-      <div class="infos-card">
+      <div class="infos-card reveal-scale">
         <div class="infos-list">
           <div class="infos-row">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11.5A7 7 0 0 1 19 9.5C19 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.6"/></svg>
@@ -992,9 +1024,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 
 <section class="avis-section" id="avis" aria-labelledby="avis-title">
   <div class="container">
+    <div class="reveal">
     <p class="kicker" style="justify-content:center;">Avis clients</p>
     <h2 class="section-title" id="avis-title">Vos avis arrivent bientôt</h2>
-    <div class="avis-card">
+    </div>
+    <div class="avis-card reveal-scale">
       <div class="avis-stars" aria-hidden="true">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.8 1.4 7L12 17.8 5.6 21.1 7 14.1 2 9.3l7.1-.7L12 2Z"/></svg>
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.8 1.4 7L12 17.8 5.6 21.1 7 14.1 2 9.3l7.1-.7L12 2Z"/></svg>
@@ -1147,6 +1181,22 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
   document.addEventListener("keydown", function(e){
     if (e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
   });
+
+  // Scroll reveal animations
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!prefersReducedMotion && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("js-anim");
+    var revealTargets = document.querySelectorAll(".reveal, .reveal-scale, .reveal-group");
+    var revealObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .15, rootMargin: "0px 0px -8% 0px" });
+    revealTargets.forEach(function(el){ revealObserver.observe(el); });
+  }
 })();
 </script>
 </body>
