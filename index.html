@@ -85,15 +85,6 @@ letter-spacing:.16em;text-transform:uppercase;color:var(--green);
 margin:0 0 14px;
 }
 .kicker::before{content:"";width:26px;height:1.5px;background:var(--green);display:inline-block;}
-.kicker .leaf-accent{width:26px;height:auto;flex-shrink:0;opacity:.8;animation:leafAccentSway 5s ease-in-out infinite;transform-origin:50% 80%;}
-.leaf-watermark{
-position:absolute;top:-22px;right:-8px;width:170px;height:auto;
-opacity:.14;transform:rotate(10deg);pointer-events:none;z-index:-1;
-animation:leafSway 8s ease-in-out infinite;transform-origin:50% 70%;
-}
-@keyframes leafSway{0%,100%{transform:rotate(10deg);}50%{transform:rotate(15deg) translateY(-5px);}}
-@keyframes leafAccentSway{0%,100%{transform:rotate(0deg);}50%{transform:rotate(-7deg);}}
-@media (max-width:599px){ .leaf-watermark{width:110px;top:-10px;right:-4px;} }
 .section-title{
 font-family:var(--font-display);
 font-weight:600;
@@ -155,26 +146,12 @@ html.js-anim .reveal-group.is-visible > *:nth-child(3){transition-delay:.21s;}
 html.js-anim .reveal-group.is-visible > *:nth-child(4){transition-delay:.29s;}
 html.js-anim .reveal-group.is-visible > *:nth-child(5){transition-delay:.37s;}
 html.js-anim .reveal-group.is-visible > *:nth-child(6){transition-delay:.45s;}
-.branch-accent{
-position:absolute;top:-14px;right:-10px;width:72px;height:auto;
-opacity:.5;pointer-events:none;
-animation:branchSway 6.5s ease-in-out infinite;transform-origin:30% 50%;
-}
-@keyframes branchSway{0%,100%{transform:rotate(0deg);}50%{transform:rotate(4deg);}}
-@media (max-width:599px){ .branch-accent{width:52px;top:-10px;right:-6px;} }
-html.js-anim svg.draw-line{
-stroke-dasharray:150;stroke-dashoffset:150;
-transition:stroke-dashoffset 1.6s ease .15s;
-}
-html.js-anim .reveal.is-visible svg.draw-line,
-html.js-anim .reveal-scale.is-visible svg.draw-line,
-html.js-anim .reveal-group.is-visible svg.draw-line{
-stroke-dashoffset:0;
-}
 .visually-hidden{
 position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
 clip:rect(0,0,0,0);white-space:nowrap;border:0;
 }
+/* Compense le header fixe pour que les liens d'ancrage n'arrivent pas sous celui-ci */
+#presentation,#menu,#galerie,#infos,#avis{scroll-margin-top:76px;}
 /* ---------- Header ---------- */
 .site-header{
 position:fixed;inset-inline:0;top:0;z-index:200;
@@ -566,30 +543,6 @@ animation:pulse-ring 2.4s ease-out infinite;
 </head>
 <body>
 <a class="skip-link" href="#main">Aller au contenu principal</a>
-<!-- Leaf sprig accent, reused via <use> -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-<symbol id="leaf-sprig" viewBox="0 0 100 56">
-<g fill="none" stroke="var(--sage)" stroke-width="2" stroke-linecap="round">
-<path d="M4 50C20 42 34 32 46 22C54 15 62 9 94 4"/>
-</g>
-<g fill="var(--sage)">
-<ellipse cx="14" cy="44" rx="9" ry="4.3" transform="rotate(-32 14 44)"/>
-<ellipse cx="27" cy="35" rx="9.5" ry="4.5" transform="rotate(-38 27 35)"/>
-<ellipse cx="40" cy="25" rx="9" ry="4.3" transform="rotate(-44 40 25)"/>
-<ellipse cx="54" cy="16" rx="8" ry="3.9" transform="rotate(-50 54 16)"/>
-<ellipse cx="67" cy="10" rx="6.5" ry="3.2" transform="rotate(-55 67 10)"/>
-</g>
-</symbol>
-<symbol id="branch-line" viewBox="0 0 100 56">
-<path d="M4 50C20 42 34 32 46 22C54 15 62 9 94 4" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round"/>
-<g fill="none" stroke="var(--sage)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-<path d="M14 44C11 40 11 35 14 31C17 35 17 40 14 44Z" transform="rotate(-32 14 44)"/>
-<path d="M27 35C24 31 24 26 27 22C30 26 30 31 27 35Z" transform="rotate(-38 27 35)"/>
-<path d="M40 25C37 21 37 16 40 12C43 16 43 21 40 25Z" transform="rotate(-44 40 25)"/>
-<path d="M54 16C51.5 13 51.5 9 54 6C56.5 9 56.5 13 54 16Z" transform="rotate(-50 54 16)"/>
-</g>
-</symbol>
-</svg>
 <header class="site-header" id="site-header">
 <div class="container header-inner">
 <a href="#hero" class="brand" aria-label="La Case 31, retour à l'accueil">
@@ -680,8 +633,7 @@ Réserver sur WhatsApp
 </picture>
 </div>
 <div class="reveal" style="position:relative;">
-<svg class="leaf-watermark" viewBox="0 0 100 56" aria-hidden="true"><use href="#leaf-sprig"/></svg>
-<p class="kicker">Notre histoire <svg class="leaf-accent" viewBox="0 0 100 56" aria-hidden="true"><use href="#leaf-sprig"/></svg></p>
+<p class="kicker">Notre histoire</p>
 <h2 class="section-title" id="presentation-title">Deux mondes, une même exigence</h2>
 <p class="section-lede">Dans le jardin tropical de l'Habitation Poterie, notre cuisine marie deux univers : l'authenticité parfumée de la Thaïlande et l'exigence d'une boucherie de caractère, maturée jusqu'à 7 semaines.</p>
 <div class="feature-chips reveal-group">
@@ -721,14 +673,13 @@ Réserver sur WhatsApp
 <span class="viandes-caption">Black Angus &amp; Wagyu maturés</span>
 </div>
 <div class="viandes-text">
-<svg class="branch-accent draw-line" viewBox="0 0 100 56" aria-hidden="true"><use href="#branch-line"/></svg>
 <p class="kicker">Le geste boucher</p>
 <h2 class="section-title" id="menu-title" style="margin-bottom:0;">Des viandes maturées qui s'imposent</h2>
 <p>Wagyu, Black Angus, côtes de bœuf Hereford, Salers ou Shorthorn. Chaque pièce est affinée plusieurs semaines pour un persillage et une saveur hors normes.</p>
 </div>
 </div>
 <div class="menu-head reveal">
-<p class="kicker">La carte <svg class="leaf-accent" viewBox="0 0 100 56" aria-hidden="true"><use href="#leaf-sprig"/></svg></p>
+<p class="kicker">La carte</p>
 <h3 class="section-title" style="font-size:clamp(1.8rem,4vw,2.4rem);">Entrées, plats thaïs, viandes &amp; douceurs</h3>
 <p class="section-lede">Entrées thaïes, plats signature, pièces de bœuf d'exception, desserts maison et sélection de vins.</p>
 <!-- TODO client: remplacer par le PDF définitif une fois fourni -->
@@ -977,7 +928,7 @@ Télécharger la carte (PDF)
 <div class="container">
 <div class="infos-grid">
 <div class="reveal">
-<p class="kicker">Infos pratiques <svg class="leaf-accent" viewBox="0 0 100 56" aria-hidden="true"><use href="#leaf-sprig"/></svg></p>
+<p class="kicker">Infos pratiques</p>
 <h2 class="section-title" id="infos-title">Nous trouver, nous écrire</h2>
 <p class="section-lede">Dans le jardin de l'Habitation Poterie, aux Trois-Îlets, à quelques minutes de Fort-de-France.</p>
 <div class="infos-actions">
@@ -990,7 +941,6 @@ Contacter sur WhatsApp
 <p class="infos-map-note">Le numéro WhatsApp affiché est un espace réservé. Il sera remplacé par le numéro définitif du restaurant.</p>
 </div>
 <div class="infos-card reveal-scale">
-<svg class="branch-accent draw-line" viewBox="0 0 100 56" aria-hidden="true"><use href="#branch-line"/></svg>
 <div class="infos-list">
 <div class="infos-row">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.5-7-11.5A7 7 0 0 1 19 9.5C19 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.6"/></svg>
@@ -1027,7 +977,6 @@ Contacter sur WhatsApp
 <h2 class="section-title" id="avis-title">Vos avis arrivent bientôt</h2>
 </div>
 <div class="avis-card reveal-scale">
-<svg class="branch-accent draw-line" viewBox="0 0 100 56" aria-hidden="true"><use href="#branch-line"/></svg>
 <div class="avis-stars" aria-hidden="true">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.8 1.4 7L12 17.8 5.6 21.1 7 14.1 2 9.3l7.1-.7L12 2Z"/></svg>
 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.8 1.4 7L12 17.8 5.6 21.1 7 14.1 2 9.3l7.1-.7L12 2Z"/></svg>
